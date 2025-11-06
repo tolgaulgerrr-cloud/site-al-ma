@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640" height="320" viewBox="0 0 640 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap');
+    .brand { fill: #2F8F6A; }
+    .ink { fill: #111827; }
+    .text { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+  </style>
+  <rect class="brand" x="80"  y="70" width="28" height="120" rx="4"/>
+  <rect class="brand" x="120" y="70" width="28" height="120" rx="4"/>
+  <rect class="brand" x="160" y="70" width="28" height="120" rx="4"/>
+  <text x="220" y="175" class="ink text" font-weight="800" font-size="150">D</text>
+  <text x="80"  y="230" class="ink text" font-weight="800" font-size="54">DMR</text>
+  <text x="80"  y="270" class="ink text" font-weight="600" font-size="20" letter-spacing="3">DOĞRU MAĞAZACILIK REHBERİ</text>
+</svg>
