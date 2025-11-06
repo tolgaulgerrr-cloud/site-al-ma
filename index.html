@@ -28,7 +28,7 @@
     .shadow-soft { box-shadow: 0 10px 30px rgba(2,132,199,.15); }
     /* Referans logo şeridi */
     .logo-scroller{overflow:hidden; position:relative}
-    .logo-track{display:flex; align-items:center; gap:3rem; width:max-content; animation:logoslide 28s linear infinite}
+    .logo-track{display:flex;align-items:center;gap:3rem;width:max-content;animation:logoslide 28s linear infinite}
     .logo-scroller:hover .logo-track{animation-play-state:paused}
     @keyframes logoslide{from{transform:translateX(0)} to{transform:translateX(-50%)} }
   </style>
@@ -151,31 +151,25 @@
   </section>
 
   <!-- Referanslar -->
-  <section id="referanslar" class="scroll-mt-24 py-16">
+  <section id="referanslar" class="scroll-mt-24 py-16 bg-white">
     <div class="mx-auto max-w-7xl px-4">
-      <h2 class="text-3xl font-bold">Referanslar</h2>
-      <p class="mt-2 text-slate-300">Aşağıdaki logolar örnektir. Kendi logolarınızı <code>/assets/refs/</code> klasörüne koyun ve isimleri aynı bırakın (logo1.png, logo2.png ...). Eksik dosyalar otomatik gizlenir.</p>
-      <div class="mt-8 rounded-2xl border border-slate-700 bg-slate-800 p-6">
+      <h2 class="text-3xl font-bold text-slate-900">Referanslar</h2>
+      <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6">
         <div class="logo-scroller">
-          <!-- Sonsuz döngü için iki kez aynı dizi -->
           <div class="logo-track">
-            <img src="/assets/refs/logo1.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo1" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo2.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo2" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo3.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo3" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo4.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo4" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo5.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo5" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo6.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo6" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo7.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo7" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo8.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo8" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo1.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo1" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo2.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo2" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo3.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo3" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo4.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo4" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo5.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo5" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo6.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo6" onerror="this.style.display='none'"/>
             <!-- kopya -->
-            <img src="/assets/refs/logo1.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo1" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo2.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo2" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo3.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo3" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo4.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo4" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo5.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo5" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo6.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo6" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo7.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo7" onerror="this.style.display='none'"/>
-            <img src="/assets/refs/logo8.png" class="h-10 md:h-12 opacity-80 hover:opacity-100 grayscale hover:grayscale-0 transition" alt="logo8" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo1.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo1" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo2.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo2" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo3.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo3" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo4.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo4" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo5.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo5" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo6.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo6" onerror="this.style.display='none'"/>
           </div>
         </div>
       </div>
