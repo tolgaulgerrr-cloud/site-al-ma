@@ -27,22 +27,39 @@
     .glass { backdrop-filter: saturate(180%) blur(10px); background: rgba(255,255,255,.7); }
     .shadow-soft { box-shadow: 0 10px 30px rgba(2,132,199,.15); }
   </style>
+  <link rel="canonical" href="https://www.dmrsayim.com" />
+  <link rel="preload" as="image" href="/assets/dmr-logo.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DMR Sayım",
+    "url": "https://www.dmrsayim.com",
+    "logo": "https://www.dmrsayim.com/assets/dmr-logo.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "+90-536-561-9831"
+    }]
+  }
+  </script>
 </head>
-<body class="antialiased text-slate-800">
+<body class="antialiased bg-slate-900 text-slate-100">
   <!-- Üst Bar -->
-  <header class="sticky top-0 z-50 bg-white/90 glass border-b border-slate-100">
+  <header class="sticky top-0 z-50 bg-slate-900/90 glass border-b border-slate-800">
     <div class="mx-auto max-w-7xl px-4">
       <div class="flex items-center justify-between h-16">
         <a href="#" class="flex items-center gap-2 font-semibold" aria-label="DMR Sayım anasayfa">
-          <img src="/assets/dmr-logo.png" alt="DMR Sayım" class="h-8 w-auto hidden sm:inline" onerror="this.style.display='none'" />
+          <img src="/assets/dmr-logo.png" alt="DMR Sayım" loading="eager" decoding="async" class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto" onerror="this.style.display='none'" />
           <span class="sm:hidden">DMR Sayım</span>
         </a>
         <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#ozellikler" class="hover:text-brand">Hizmetlerimiz</a>
-          <a href="#hakkimizda" class="hover:text-brand">Hakkımızda</a>
-          <a href="#referanslar" class="hover:text-brand">Referanslar</a>
-          <a href="#sss" class="hover:text-brand">Avantajlarımız</a>
-          <a href="#iletisim" class="inline-flex items-center rounded-xl bg-brand px-4 py-2 text-white shadow-soft hover:bg-brand-dark">Teklif Al</a>
+          <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-brand text-white px-3 py-1 rounded">İçeriğe geç</a>
+          <a href="#ozellikler" class="rounded-md px-2 py-1 transition-colors hover:bg-slate-800/60 hover:underline underline-offset-4">Hizmetlerimiz</a>
+          <a href="#hakkimizda" class="rounded-md px-2 py-1 transition-colors hover:bg-slate-800/60 hover:underline underline-offset-4">Hakkımızda</a>
+          <a href="#referanslar" class="rounded-md px-2 py-1 transition-colors hover:bg-slate-800/60 hover:underline underline-offset-4">Referanslar</a>
+          <a href="#sss" class="rounded-md px-2 py-1 transition-colors hover:bg-slate-800/60 hover:underline underline-offset-4">Avantajlarımız</a>
+          <a href="#iletisim" class="inline-flex items-center rounded-xl bg-brand px-4 py-2 text-white shadow-soft hover:bg-brand-dark focus:outline-none focus:ring-2 focus:ring-brand/60">Teklif Al</a>
         </nav>
         <button id="menuBtn" class="md:hidden inline-flex items-center p-2 rounded-lg hover:bg-slate-100" aria-label="Menüyü aç/kapat">
           <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -50,10 +67,10 @@
       </div>
       <div id="mobileNav" class="md:hidden hidden pb-4">
         <div class="flex flex-col gap-3 text-sm">
-          <a href="#ozellikler" class="hover:text-brand">Hizmetlerimiz</a>
-          <a href="#hakkimizda" class="hover:text-brand">Hakkımızda</a>
-          <a href="#referanslar" class="hover:text-brand">Referanslar</a>
-          <a href="#sss" class="hover:text-brand">Avantajlarımız</a>
+          <a href="#ozellikler" class="rounded-md px-2 py-2 transition-colors hover:bg-slate-800/60">Hizmetlerimiz</a>
+          <a href="#hakkimizda" class="rounded-md px-2 py-2 transition-colors hover:bg-slate-800/60">Hakkımızda</a>
+          <a href="#referanslar" class="rounded-md px-2 py-2 transition-colors hover:bg-slate-800/60">Referanslar</a>
+          <a href="#sss" class="rounded-md px-2 py-2 transition-colors hover:bg-slate-800/60">Avantajlarımız</a>
           <a href="#iletisim" class="inline-flex items-center justify-center rounded-xl bg-brand px-4 py-2 text-white shadow-soft hover:bg-brand-dark">Teklif Al</a>
         </div>
       </div>
@@ -63,25 +80,25 @@
 
   <!-- Hero -->
   <section class="relative overflow-hidden">
-    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-sky-50 to-white"></div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-slate-900 to-slate-900"></div>
     <div class="mx-auto max-w-7xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-8 items-center">
       <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight md:leading-tight tracking-tight">
           Envanteriniz <span class="text-brand">doğru, güvenilir ve verimli</span> yönetilsin.
         </h1>
-        <p class="mt-4 text-lg text-slate-600">Stok sayımı, sabit kıymet sayımı, hybrid sayım ve ekipman kiralama hizmetleri.</p>
+        <p class="mt-4 text-lg text-slate-300">Stok sayımı, sabit kıymet sayımı, hybrid sayım ve ekipman kiralama hizmetleri.</p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#iletisim" class="inline-flex items-center rounded-xl bg-brand px-5 py-3 text-white shadow-soft hover:bg-brand-dark">Teklif iste</a>
-          <a href="#ozellikler" class="inline-flex items-center rounded-xl border px-5 py-3 hover:bg-slate-50">Özellikleri gör</a>
+          <a href="#ozellikler" class="inline-flex items-center rounded-xl border px-5 py-3 hover:bg-slate-800">Özellikleri gör</a>
         </div>
-        <div class="mt-6 text-sm text-slate-500">SSL ✅ · Mobil uyumlu ✅ · Hızlı yükleme ✅</div>
+        <div class="mt-6 text-sm text-slate-400">SSL ✅ · Mobil uyumlu ✅ · Hızlı yükleme ✅</div>
       </div>
       <div class="relative">
         <div class="aspect-video rounded-2xl border shadow-soft bg-white flex items-center justify-center">
           <div class="p-6 text-center">
-            <div class="text-sm uppercase tracking-widest text-slate-500">Canlı Önizleme</div>
+            <div class="text-sm uppercase tracking-widest text-slate-400">Canlı Önizleme</div>
             <div class="mt-2 text-2xl font-semibold">Hero + Özellikler + İletişim</div>
-            <div class="mt-4 text-slate-500">Bu alanı ürün görseli veya kısa tanıtım videosu ile değiştirebilirsiniz.</div>
+            <div class="mt-4 text-slate-400">Bu alanı ürün görseli veya kısa tanıtım videosu ile değiştirebilirsiniz.</div>
           </div>
         </div>
       </div>
@@ -89,51 +106,51 @@
   </section>
 
   <!-- Özellikler -->
-  <section id="ozellikler" class="py-16 md:py-24">
+  <section id="ozellikler" class="scroll-mt-24 py-16 md:py-24">
     <div class="mx-auto max-w-7xl px-4">
       <h2 class="text-3xl font-bold">Hizmetlerimiz</h2>
-      <p class="mt-2 text-slate-600">Kutudan çıktığı gibi kullanın; içerikleri kolayca düzenleyin.</p>
+      <p class="mt-2 text-slate-300">Kutudan çıktığı gibi kullanın; içerikleri kolayca düzenleyin.</p>
       <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border p-6 hover:shadow-soft">
+        <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6 hover:shadow-soft">
           <div class="text-brand font-semibold">Stok Sayım</div>
-          <p class="mt-2 text-slate-600">Mağaza/depo operasyonlarını aksatmadan doğru ve hızlı sayım.</p>
+          <p class="mt-2 text-slate-300">Mağaza/depo operasyonlarını aksatmadan doğru ve hızlı sayım.</p>
         </div>
-        <div class="rounded-2xl border p-6 hover:shadow-soft">
+        <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6 hover:shadow-soft">
           <div class="text-brand font-semibold">Hybrid Sayım</div>
-          <p class="mt-2 text-slate-600">Mağaza personeli + DMR ekipman/yazılım desteği ile optimize maliyet.</p>
+          <p class="mt-2 text-slate-300">Mağaza personeli + DMR ekipman/yazılım desteği ile optimize maliyet.</p>
         </div>
-        <div class="rounded-2xl border p-6 hover:shadow-soft">
+        <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6 hover:shadow-soft">
           <div class="text-brand font-semibold">Sabit Kıymet Sayımı</div>
-          <p class="mt-2 text-slate-600">Demirbaş tespiti, etiketleme ve detaylı raporlama.</p>
+          <p class="mt-2 text-slate-300">Demirbaş tespiti, etiketleme ve detaylı raporlama.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Hakkımızda -->
-  <section id="hakkimizda" class="py-16 bg-slate-50">
+  <section id="hakkimizda" class="scroll-mt-24 py-16 bg-slate-800">
     <div class="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h2 class="text-3xl font-bold">Kısaca <span class="text-brand">DMR Sayım</span></h2>
-        <p class="mt-3 text-slate-600">DMR Sayım; perakende, endüstri, market, kozmetik ve tekstil gibi farklı sektörlerde güvenilir envanter çözümleri sunar. Operasyonlarınızı kesintiye uğratmadan hızlı ve doğruluk odaklı sayım hizmetleri sağlar.<\/p>
-        <ul class="mt-4 space-y-2 text-slate-600 list-disc list-inside">
+        <p class="mt-3 text-slate-300">DMR Sayım; perakende, endüstri, market, kozmetik ve tekstil gibi farklı sektörlerde güvenilir envanter çözümleri sunar. Operasyonlarınızı kesintiye uğratmadan hızlı ve doğruluk odaklı sayım hizmetleri sağlar.<\/p>
+        <ul class="mt-4 space-y-2 text-slate-300 list-disc list-inside">
           <li>Tarafsız, bağımsız sayım sonuçları</li>
           <li>Size özel tasarlanmış raporlar</li>
           <li>Türkiye genelinde hizmet ağı</li>
         </ul>
       </div>
       <div class="aspect-video rounded-2xl bg-white border shadow-soft flex items-center justify-center">
-        <span class="text-slate-500">Görsel / ekip fotoğrafı / lokasyon haritası</span>
+        <span class="text-slate-400">Görsel / ekip fotoğrafı / lokasyon haritası</span>
       </div>
     </div>
   </section>
 
   <!-- Referanslar -->
-  <section id="referanslar" class="py-16">
+  <section id="referanslar" class="scroll-mt-24 py-16">
     <div class="mx-auto max-w-7xl px-4">
       <h2 class="text-3xl font-bold">Referanslar</h2>
       <div class="mt-8">
-        <div class="rounded-2xl border p-8 text-center text-slate-600 bg-slate-50">
+        <div class="rounded-2xl border p-8 text-center text-slate-300 bg-slate-800">
           <div class="text-lg font-semibold mb-2">Yapım Aşamasında</div>
           <p>Kısa süre içinde referanslarımızı ve başarı hikayelerimizi burada paylaşacağız.</p>
         </div>
@@ -142,59 +159,88 @@
   </section>
 
   <!-- Avantajlar -->
-  <section id="sss" class="py-16 bg-slate-50">
+  <section id="sss" class="scroll-mt-24 py-16 bg-slate-800">
     <div class="mx-auto max-w-7xl px-4">
       <h2 class="text-3xl font-bold">Avantajlarımız</h2>
       <div class="mt-6 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border p-6"><div class="text-lg font-semibold">Tarafsız Sonuçlar</div><p class="mt-2 text-slate-600">Bağımsız ekiplerle şeffaf, güvenilir sayım.</p></div>
-        <div class="rounded-2xl border p-6"><div class="text-lg font-semibold">Kayıp Önleme</div><p class="mt-2 text-slate-600">Fark ve kayıpların hızla tespiti ile kârlılık artışı.</p></div>
-        <div class="rounded-2xl border p-6"><div class="text-lg font-semibold">Özel Raporlar</div><p class="mt-2 text-slate-600">Yönetim ihtiyaçlarına uygun rapor tasarımları.</p></div>
+        <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6"><div class="text-lg font-semibold">Tarafsız Sonuçlar</div><p class="mt-2 text-slate-300">Bağımsız ekiplerle şeffaf, güvenilir sayım.</p></div>
+        <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6"><div class="text-lg font-semibold">Kayıp Önleme</div><p class="mt-2 text-slate-300">Fark ve kayıpların hızla tespiti ile kârlılık artışı.</p></div>
+        <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6"><div class="text-lg font-semibold">Özel Raporlar</div><p class="mt-2 text-slate-300">Yönetim ihtiyaçlarına uygun rapor tasarımları.</p></div>
       </div>
     </div>
   </section>
 
   <!-- İletişim -->
-  <section id="iletisim" class="py-16">
+  <section id="iletisim" class="scroll-mt-24 py-16">
     <div class="mx-auto max-w-3xl px-4">
       <div class="rounded-2xl border p-8 shadow-soft">
         <h2 class="text-3xl font-bold">Bizimle <span class="text-brand">iletişime geçin</span></h2>
-        <p class="mt-2 text-slate-600">Aşağıdaki formu doldurun; aynı gün dönüş yapalım.</p>
+        <p class="mt-2 text-slate-300">Aşağıdaki formu doldurun; aynı gün dönüş yapalım.</p>
         <form class="mt-6 grid gap-4" action="https://formspree.io/f/mzzknzoq" method="POST">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_subject" value="DMR Sayım | Yeni İletişim" />
           <div class="grid md:grid-cols-2 gap-4">
             <div>
-              <label class="text-sm text-slate-600">Ad Soyad</label>
-              <input name="name" required class="mt-1 w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" />
+              <label class="text-sm text-slate-300">Ad Soyad</label>
+              <input name="name" autocomplete="name" required class="mt-1 w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" />
             </div>
             <div>
-              <label class="text-sm text-slate-600">E-posta</label>
-              <input type="email" name="email" required class="mt-1 w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" />
+              <label class="text-sm text-slate-300">E-posta</label>
+              <input type="email" name="email" autocomplete="email" required class="mt-1 w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" />
             </div>
           </div>
           <div>
-            <label class="text-sm text-slate-600">Mesajınız</label>
+            <label class="text-sm text-slate-300">Mesajınız</label>
             <textarea name="message" rows="4" required class="mt-1 w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand"></textarea>
           </div>
           <div class="flex items-center justify-between gap-4">
-            <label class="inline-flex items-center gap-2 text-sm text-slate-600">
+            <label class="inline-flex items-center gap-2 text-sm text-slate-300">
               <input type="checkbox" required class="rounded" /> KVKK'yi okudum ve onaylıyorum.
             </label>
-            <button class="inline-flex items-center rounded-xl bg-brand px-6 py-3 text-white hover:bg-brand-dark">Gönder</button>
+            <button class="inline-flex items-center rounded-xl bg-brand px-6 py-3 text-white hover:bg-brand-dark focus:outline-none focus:ring-2 focus:ring-brand/60">Gönder</button>
           </div>
         </form>
-        <div class="mt-6 text-sm text-slate-500">
+        <div class="mt-6 text-sm text-slate-400">
           Alternatif: <a class="text-brand underline" href="https://wa.me/905365619831" target="_blank" rel="noreferrer">WhatsApp</a> · <a class="text-brand underline" href="mailto:info@dmrsayim.com">info@dmrsayim.com</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- KVKK -->
+  <section id="kvkk" class="scroll-mt-24 py-16 bg-slate-800">
+    <div class="mx-auto max-w-4xl px-4">
+      <h2 class="text-3xl font-bold">KVKK Aydınlatma Metni</h2>
+      <p class="mt-4 text-slate-300">DMR Sayım olarak 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında; iletişim formları, teklif süreçleri ve müşteri ilişkileri yönetimi sırasında paylaştığınız ad, soyad, e‑posta, telefon ve mesaj içeriklerinizi işlemekteyiz. Verileriniz; sözleşmenin kurulması/ifası, meşru menfaat ve açık rıza şartlarına dayanarak işlenir; hukuki yükümlülükler gereği ilgili kişi/kurumlarla ve hizmet sağlayıcılarımızla sınırlı olarak paylaşılabilir.</p>
+      <ul class="list-disc list-inside mt-4 text-slate-300 space-y-2">
+        <li><span class="font-semibold">Amaçlar:</span> İletişim/tekliflendirme, operasyon planlama, müşteri memnuniyeti.</li>
+        <li><span class="font-semibold">Saklama Süresi:</span> Mevzuat ve sözleşmesel yükümlülükler uyarınca gerekli süre.</li>
+        <li><span class="font-semibold">Haklarınız:</span> KVKK m.11 uyarınca erişim, düzeltme, silme, itiraz.</li>
+        <li><span class="font-semibold">Başvuru:</span> <a class="underline" href="mailto:info@dmrsayim.com">info@dmrsayim.com</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Çerez Politikası -->
+  <section id="cerez" class="scroll-mt-24 py-16">
+    <div class="mx-auto max-w-4xl px-4">
+      <h2 class="text-3xl font-bold">Çerez (Cookie) Politikası</h2>
+      <p class="mt-4 text-slate-300">Web sitemizde zorunlu çerezler siteyi çalıştırmak için kullanılır. İstatistik/performans çerezleri yalnızca açık rızanızla devreye alınır. Tarayıcı ayarlarınızdan çerez tercihlerinizi yönetebilirsiniz. Üçüncü taraf bağlantılar (WhatsApp, Formspree) kendi çerez/politikalarına tabidir.</p>
+      <ul class="list-disc list-inside mt-4 text-slate-300 space-y-2">
+        <li><span class="font-semibold">Zorunlu Çerezler:</span> Oturum ve güvenlik için gereklidir.</li>
+        <li><span class="font-semibold">Performans Çerezleri:</span> Kullanım istatistikleri (açık rıza ile).</li>
+        <li><span class="font-semibold">Yönetim:</span> Tarayıcı ayarlarınızdan çerezleri silebilir veya engelleyebilirsiniz.</li>
+      </ul>
+    </div>
+  </section>
+
   <!-- Altbilgi -->
-  <footer class="py-10 border-t">
-    <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+  <footer class="py-10 border-t border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400">
       <div>© <span id="yil"></span> DMR Sayım. Tüm hakları saklıdır.</div>
       <div class="flex items-center gap-4">
-        <a href="#" class="hover:text-brand">KVKK</a>
-        <a href="#" class="hover:text-brand">Çerez Politikası</a>
+        <a href="#kvkk" class="hover:text-brand">KVKK</a>
+        <a href="#cerez" class="hover:text-brand">Çerez Politikası</a>
         <a href="#" class="hover:text-brand">İletişim</a>
       </div>
     </div>
@@ -216,7 +262,7 @@
   <!-- (Opsiyonel) Analytics - gerçek UA/GA4 kodunuzu ekleyin -->
   <!-- <script>/* Google Analytics */</script> -->
   <!-- Yüzen WhatsApp Balonu (mobil + desktop) -->
-  <a href="https://wa.me/905365619831" target="_blank" rel="noreferrer" aria-label="WhatsApp ile yazın"
+  <a href="https://wa.me/905365619831" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile yazın"
      class="fixed bottom-6 right-4 md:bottom-8 md:right-6 z-50 rounded-full px-4 py-4 md:px-5 md:py-4 bg-[#25D366] text-white shadow-soft hover:bg-[#1ebe57] hover:scale-105 active:scale-95 transition">
     <span class="inline-flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6" aria-hidden="true">
