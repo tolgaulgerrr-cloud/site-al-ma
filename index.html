@@ -1,308 +1,254 @@
 <!doctype html>
-<html lang="tr" class="scroll-smooth">
+<html lang="tr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DMR Sayım | Yenilikçi Envanter Çözümleri</title>
-  <meta name="description" content="DMR Sayım; stok sayım, sabit kıymet sayımı, hybrid sayım ve ekipman kiralama hizmetleri sunar. Güvenilir, hızlı ve profesyonel envanter çözümleri." />
-  <meta name="theme-color" content="#0ea5e9" />
+  <title>DMR Sayım – Doğru Mağazacılık Rehberi</title>
+  <meta name="description" content="DMR Sayım: stok sayımı, sabit kıymet sayımı, hybrid sayım ve ekipman kiralama hizmetleri. Hızlı, güvenilir, ölçülebilir." />
+
+  <link rel="canonical" href="https://www.dmrsayim.com" />
+  <meta property="og:title" content="DMR Sayım" />
+  <meta property="og:description" content="Stok sayımı, sabit kıymet sayımı, hybrid sayım ve ekipman kiralama." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.dmrsayim.com" />
+  <meta property="og:image" content="/assets/og-image.png" />
+
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="DMR Sayım" />
-  <meta property="og:description" content="Stok sayım, sabit kıymet sayımı, hybrid sayım ve ekipman kiralama: güvenilir ve hızlı çözümler." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/assets/og-image.png" />
-  <meta property="og:url" content="https://www.dmrsayim.com" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
 
-  <!-- Tailwind via CDN (geliştirme için idealdir) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { brand: { DEFAULT: '#567760', dark: '#445F4C' }}}}};
-  </script>
-
+  <!-- Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    /* Küçük şık dokunuşlar */
-    .glass { backdrop-filter: saturate(180%) blur(10px); background: rgba(255,255,255,.7); }
-    .shadow-soft { box-shadow: 0 10px 30px rgba(2,132,199,.15); }
+    html{font-family:"Inter",ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
     /* Referans logo şeridi */
-    .logo-scroller{overflow:hidden; position:relative}
+    .logo-scroller{overflow:hidden;position:relative}
     .logo-track{display:flex;align-items:center;gap:3rem;width:max-content;animation:logoslide 28s linear infinite}
     .logo-scroller:hover .logo-track{animation-play-state:paused}
-    @keyframes logoslide{from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    @keyframes logoslide{from{transform:translateX(0)} to{transform:translateX(-50%)}}
   </style>
-  <link rel="canonical" href="https://www.dmrsayim.com" />
-  <link rel="preload" as="image" href="/assets/dmr-logo.png" />
+
+  <!-- Tailwind (CDN) ve marka rengi -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { DEFAULT: '#2F8F6A', dark: '#256A54' } },
+          boxShadow: { soft: '0 8px 24px rgba(0,0,0,.08)' }
+        }
+      }
+    }
+  </script>
+
+  <!-- Schema.org (Organization) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "DMR Sayım",
     "url": "https://www.dmrsayim.com",
-    "logo": "https://www.dmrsayim.com/assets/dmr-logo.png",
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "telephone": "+90-536-561-9831"
-    }]
+    "logo": "https://www.dmrsayim.com/assets/dmr-logo.svg",
+    "contactPoint": [{"@type":"ContactPoint","contactType":"customer support","telephone":"+90-536-561-9831"}]
   }
   </script>
 </head>
-<body class="antialiased bg-slate-900 text-slate-100">
-  <!-- Üst Bar -->
+
+<body class="antialiased bg-white text-slate-800">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-brand text-white px-3 py-1 rounded">İçeriğe geç</a>
+
+  <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200 shadow-sm">
     <div class="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between">
-      <div class="flex items-center justify-between h-16">
-        <a href="#" class="flex items-center gap-2 font-semibold" aria-label="DMR Sayım anasayfa">
-          <a href="/" class="flex items-center" aria-label="Anasayfa">
-            <img src="/assets/dmr-logo.png" alt="DMR Sayım" class="h-8 sm:h-9 md:h-10 w-auto" />
-          </a>
-          <span class="sm:hidden">DMR Sayım</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-brand text-white px-3 py-1 rounded">İçeriğe geç</a>
-          <a href="#ozellikler" class="rounded-md px-2 py-1 transition-colors hover:bg-slate-800/60 hover:underline underline-offset-4">Hizmetlerimiz</a>
-          <a href="#hakkimizda" class="rounded-md px-2 py-1 transition-colors hover:bg-slate-800/60 hover:underline underline-offset-4">Hakkımızda</a>
-          <a href="#referanslar" class="rounded-md px-2 py-1 transition-colors hover:bg-slate-800/60 hover:underline underline-offset-4">Referanslar</a>
-          <a href="#sss" class="rounded-md px-2 py-1 transition-colors hover:bg-slate-800/60 hover:underline underline-offset-4">Avantajlarımız</a>
-          <a href="#iletisim" class="inline-flex items-center rounded-xl bg-brand px-4 py-2 text-white shadow-soft hover:bg-brand-dark focus:outline-none focus:ring-2 focus:ring-brand/60">Teklif Al</a>
-        </nav>
-        <button id="menuBtn" class="md:hidden inline-flex items-center p-2 rounded-lg hover:bg-slate-100" aria-label="Menüyü aç/kapat">
-          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
-      </div>
-      <div id="mobileNav" class="md:hidden hidden pb-4">
-        <div class="flex flex-col gap-3 text-sm">
-          <a href="#ozellikler" class="rounded-md px-2 py-2 transition-colors hover:bg-slate-800/60">Hizmetlerimiz</a>
-          <a href="#hakkimizda" class="rounded-md px-2 py-2 transition-colors hover:bg-slate-800/60">Hakkımızda</a>
-          <a href="#referanslar" class="rounded-md px-2 py-2 transition-colors hover:bg-slate-800/60">Referanslar</a>
-          <a href="#sss" class="rounded-md px-2 py-2 transition-colors hover:bg-slate-800/60">Avantajlarımız</a>
-          <a href="#iletisim" class="inline-flex items-center justify-center rounded-xl bg-brand px-4 py-2 text-white shadow-soft hover:bg-brand-dark">Teklif Al</a>
-        </div>
-      </div>
+      <a href="/" class="flex items-center" aria-label="Anasayfa">
+        <!-- SVG marka (keskin) -->
+        <img src="/assets/dmr-logo-mark.svg" alt="DMR Sayım" class="h-9 md:h-10 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#ozellikler" class="px-2 py-1 hover:underline underline-offset-4">Hizmetlerimiz</a>
+        <a href="#hakkimizda" class="px-2 py-1 hover:underline underline-offset-4">Hakkımızda</a>
+        <a href="#referanslar" class="px-2 py-1 hover:underline underline-offset-4">Referanslar</a>
+        <a href="#avantajlar" class="px-2 py-1 hover:underline underline-offset-4">Avantajlarımız</a>
+      </nav>
+      <div class="hidden md:block">
+        <a href="#iletisim" class="inline-flex items-center rounded-xl bg-brand px-4 py-2 text-white shadow-sm hover:bg-brand-dark">Teklif Al</a>
       </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-slate-900 to-slate-900"></div>
-    <div class="mx-auto max-w-7xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight md:leading-tight tracking-tight">
-          Envanteriniz <span class="text-brand">doğru, güvenilir ve verimli</span> yönetilsin.
-        </h1>
-        <p class="mt-4 text-lg text-slate-300">Stok sayımı, sabit kıymet sayımı, hybrid sayım ve ekipman kiralama hizmetleri.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#iletisim" class="inline-flex items-center rounded-xl bg-brand px-5 py-3 text-white shadow-soft hover:bg-brand-dark">Teklif iste</a>
-          <a href="#ozellikler" class="inline-flex items-center rounded-xl border px-5 py-3 hover:bg-slate-800">Özellikleri gör</a>
-        </div>
-        <div class="mt-6 text-sm text-slate-400">SSL ✅ · Mobil uyumlu ✅ · Hızlı yükleme ✅</div>
-      </div>
-      <div class="relative">
-        <div class="aspect-video rounded-2xl border shadow-soft bg-white flex items-center justify-center">
-          <div class="p-6 text-center">
-            <div class="text-sm uppercase tracking-widest text-slate-400">Canlı Önizleme</div>
-            <div class="mt-2 text-2xl font-semibold">Hero + Özellikler + İletişim</div>
-            <div class="mt-4 text-slate-400">Bu alanı ürün görseli veya kısa tanıtım videosu ile değiştirebilirsiniz.</div>
+  <section class="relative bg-gradient-to-b from-white to-white">
+    <div class="mx-auto max-w-7xl px-4 pt-12 md:pt-16 pb-16" id="main">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="text-center md:text-left">
+          <h1 class="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-slate-900">
+            Envanteriniz <span class="text-brand">doğru, güvenilir ve verimli</span> yönetilsin.
+          </h1>
+          <p class="mt-4 text-lg md:text-xl text-slate-600">Stok sayımı, sabit kıymet sayımı, hybrid sayım ve ekipman kiralama hizmetleri.</p>
+          <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
+            <a href="#iletisim" class="inline-flex items-center rounded-xl bg-brand px-5 py-3 text-white shadow-sm hover:bg-brand-dark">Teklif iste</a>
+            <a href="#ozellikler" class="inline-flex items-center rounded-xl border border-slate-200 px-5 py-3 hover:bg-slate-50">Özellikleri gör</a>
           </div>
+          <div class="mt-6 text-sm text-slate-500">SSL ✅ · Mobil uyumlu ✅ · Hızlı yükleme ✅</div>
+        </div>
+        <div class="hidden md:block">
+          <img src="/assets/hero-placeholder.png" alt="" class="rounded-2xl border border-slate-200 w-full shadow-soft" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Özellikler -->
-  <section id="ozellikler" class="scroll-mt-24 py-16 md:py-24">
+  <!-- Hizmetler -->
+  <section id="ozellikler" class="scroll-mt-24 py-16">
     <div class="mx-auto max-w-7xl px-4">
-      <h2 class="text-3xl font-bold">Hizmetlerimiz</h2>
-      <p class="mt-2 text-slate-300">Kutudan çıktığı gibi kullanın; içerikleri kolayca düzenleyin.</p>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6 hover:shadow-soft">
-          <div class="text-brand font-semibold">Stok Sayım</div>
-          <p class="mt-2 text-slate-300">Mağaza/depo operasyonlarını aksatmadan doğru ve hızlı sayım.</p>
+      <h2 class="text-3xl font-bold text-slate-900">Hizmetlerimiz</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold text-lg">Stok Sayımı</h3>
+          <p class="mt-2 text-slate-600">Mağaza ve depo stokları için uçtan uca sayım, fark analizi, tutanak.</p>
         </div>
-        <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6 hover:shadow-soft">
-          <div class="text-brand font-semibold">Hybrid Sayım</div>
-          <p class="mt-2 text-slate-300">Mağaza personeli + DMR ekipman/yazılım desteği ile optimize maliyet.</p>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold text-lg">Sabit Kıymet Sayımı</h3>
+          <p class="mt-2 text-slate-600">Demirbaş tespiti, etiketleme, envanterle eşleştirme.</p>
         </div>
-        <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6 hover:shadow-soft">
-          <div class="text-brand font-semibold">Sabit Kıymet Sayımı</div>
-          <p class="mt-2 text-slate-300">Demirbaş tespiti, etiketleme ve detaylı raporlama.</p>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold text-lg">Hybrid Sayım</h3>
+          <p class="mt-2 text-slate-600">Planlı–anlık sayımın birleştirildiği hızlı operasyon modeli.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Hakkımızda -->
-  <section id="hakkimizda" class="scroll-mt-24 py-16 bg-slate-800">
-    <div class="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="text-3xl font-bold">Kısaca <span class="text-brand">DMR Sayım</span></h2>
-        <p class="mt-3 text-slate-300">DMR Sayım; perakende, endüstri, market, kozmetik ve tekstil gibi farklı sektörlerde güvenilir envanter çözümleri sunar. Operasyonlarınızı kesintiye uğratmadan hızlı ve doğruluk odaklı sayım hizmetleri sağlar.<\/p>
-        <ul class="mt-4 space-y-2 text-slate-300 list-disc list-inside">
-          <li>Tarafsız, bağımsız sayım sonuçları</li>
-          <li>Size özel tasarlanmış raporlar</li>
-          <li>Türkiye genelinde hizmet ağı</li>
-        </ul>
-      </div>
-      <div class="aspect-video rounded-2xl bg-white border shadow-soft flex items-center justify-center">
-        <span class="text-slate-400">Görsel / ekip fotoğrafı / lokasyon haritası</span>
-      </div>
+  <section id="hakkimizda" class="scroll-mt-24 py-16 bg-slate-50">
+    <div class="mx-auto max-w-7xl px-4">
+      <h2 class="text-3xl font-bold text-slate-900">Hakkımızda</h2>
+      <p class="mt-4 max-w-3xl text-slate-600">DMR, perakende ve operasyon yönetimi deneyimiyle; ölçülebilir, raporlanabilir ve hızlı sayım hizmetleri sunar. Esnek ekip planlaması, standartlaştırılmış raporlama, şeffaf maliyet.</p>
     </div>
   </section>
 
   <!-- Referanslar -->
   <section id="referanslar" class="scroll-mt-24 py-16 bg-white">
-  <div class="mx-auto max-w-7xl px-4">
-    <h2 class="text-3xl font-bold text-slate-900">Referanslar</h2>
-    <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6">
-      <div class="logo-scroller">
-        <div class="logo-track">
-          <!-- set #1 -->
-          <img src="/assets/refs/logo1.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo1" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo2.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo2" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo3.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo3" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo4.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo4" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo5.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo5" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo6.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo6" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo7.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo7" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo8.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo8" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo9.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo9" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo10.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo10" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo11.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo11" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo12.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo12" onerror="this.style.display='none'"/>
-          <!-- set #2 (duplicate for infinite loop) -->
-          <img src="/assets/refs/logo1.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo1" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo2.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo2" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo3.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo3" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo4.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo4" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo5.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo5" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo6.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo6" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo7.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo7" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo8.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo8" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo9.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo9" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo10.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo10" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo11.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo11" onerror="this.style.display='none'"/>
-          <img src="/assets/refs/logo12.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo12" onerror="this.style.display='none'"/>
+    <div class="mx-auto max-w-7xl px-4">
+      <h2 class="text-3xl font-bold text-slate-900">Referanslar</h2>
+      <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-6">
+        <div class="logo-scroller">
+          <div class="logo-track">
+            <!-- 1..12; eksik olanlar onerror ile gizlenir -->
+            <img src="/assets/refs/logo1.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo1" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo2.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo2" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo3.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo3" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo4.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo4" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo5.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo5" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo6.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo6" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo7.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo7" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo8.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo8" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo9.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo9" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo10.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo10" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo11.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo11" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo12.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo12" onerror="this.style.display='none'"/>
+            <!-- kopya (sonsuz loop) -->
+            <img src="/assets/refs/logo1.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo1" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo2.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo2" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo3.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo3" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo4.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo4" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo5.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo5" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo6.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo6" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo7.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo7" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo8.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo8" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo9.png"  class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo9" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo10.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo10" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo11.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo11" onerror="this.style.display='none'"/>
+            <img src="/assets/refs/logo12.png" class="h-12 md:h-14 opacity-80 hover:opacity-100 transition" alt="logo12" onerror="this.style.display='none'"/>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Avantajlar -->
-  <section id="sss" class="scroll-mt-24 py-16 bg-slate-800">
+  <section id="avantajlar" class="scroll-mt-24 py-16 bg-slate-50">
     <div class="mx-auto max-w-7xl px-4">
-      <h2 class="text-3xl font-bold">Avantajlarımız</h2>
-      <div class="mt-6 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6"><div class="text-lg font-semibold">Tarafsız Sonuçlar</div><p class="mt-2 text-slate-300">Bağımsız ekiplerle şeffaf, güvenilir sayım.</p></div>
-        <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6"><div class="text-lg font-semibold">Kayıp Önleme</div><p class="mt-2 text-slate-300">Fark ve kayıpların hızla tespiti ile kârlılık artışı.</p></div>
-        <div class="rounded-2xl border border-slate-700 bg-slate-800 p-6"><div class="text-lg font-semibold">Özel Raporlar</div><p class="mt-2 text-slate-300">Yönetim ihtiyaçlarına uygun rapor tasarımları.</p></div>
+      <h2 class="text-3xl font-bold text-slate-900">Avantajlarımız</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold">Hızlı Kurulum</h3>
+          <p class="mt-2 text-slate-600">Kısa sürede planlama, kesintisiz operasyon.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold">Şeffaf Raporlama</h3>
+          <p class="mt-2 text-slate-600">Anlaşılır, yönetim dostu çıktılar.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold">Uçtan Uca Destek</h3>
+          <p class="mt-2 text-slate-600">Saha, ekipman ve veri tarafında tek muhatap.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- İletişim -->
   <section id="iletisim" class="scroll-mt-24 py-16">
-    <div class="mx-auto max-w-3xl px-4">
-      <div class="rounded-2xl border p-8 shadow-soft">
-        <h2 class="text-3xl font-bold">Bizimle <span class="text-brand">iletişime geçin</span></h2>
-        <p class="mt-2 text-slate-300">Aşağıdaki formu doldurun; aynı gün dönüş yapalım.</p>
-        <form class="mt-6 grid gap-4" action="https://formspree.io/f/mzzknzoq" method="POST">
+    <div class="mx-auto max-w-7xl px-4">
+      <h2 class="text-3xl font-bold text-slate-900">İletişim</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <form class="rounded-2xl border border-slate-200 bg-white p-6" action="https://formspree.io/f/mzzknzoq" method="POST">
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <input type="hidden" name="_subject" value="DMR Sayım | Yeni İletişim" />
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm text-slate-300">Ad Soyad</label>
-              <input name="name" autocomplete="name" required class="mt-1 w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" />
-            </div>
-            <div>
-              <label class="text-sm text-slate-300">E-posta</label>
-              <input type="email" name="email" autocomplete="email" required class="mt-1 w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" />
-            </div>
-          </div>
-          <div>
-            <label class="text-sm text-slate-300">Mesajınız</label>
-            <textarea name="message" rows="4" required class="mt-1 w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand"></textarea>
-          </div>
-          <div class="flex items-center justify-between gap-4">
-            <label class="inline-flex items-center gap-2 text-sm text-slate-300">
-              <input type="checkbox" required class="rounded" /> KVKK'yi okudum ve onaylıyorum.
-            </label>
-            <button class="inline-flex items-center rounded-xl bg-brand px-6 py-3 text-white hover:bg-brand-dark focus:outline-none focus:ring-2 focus:ring-brand/60">Gönder</button>
-          </div>
+          <label class="block text-sm font-medium">Ad Soyad</label>
+          <input name="name" autocomplete="name" required class="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand/60" />
+          <label class="block text-sm font-medium mt-4">E‑posta</label>
+          <input type="email" name="email" autocomplete="email" required class="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand/60" />
+          <label class="block text-sm font-medium mt-4">Mesaj</label>
+          <textarea name="message" rows="4" class="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand/60"></textarea>
+          <button class="mt-5 inline-flex items-center rounded-xl bg-brand px-6 py-3 text-white hover:bg-brand-dark focus:outline-none focus:ring-2 focus:ring-brand/60">Gönder</button>
         </form>
-        <div class="mt-6 text-sm text-slate-400">
-          Alternatif: <a class="text-brand underline" href="https://wa.me/905365619831" target="_blank" rel="noreferrer">WhatsApp</a> · <a class="text-brand underline" href="mailto:info@dmrsayim.com">info@dmrsayim.com</a>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <p class="text-slate-600">Telefon: <a href="tel:+905365619831" class="font-semibold hover:underline">0536 561 9831</a></p>
+          <p class="mt-2 text-slate-600">E‑posta: <a href="mailto:info@dmrsayim.com" class="hover:underline">info@dmrsayim.com</a></p>
+          <p class="mt-2 text-slate-600">Adres: İstanbul / İzmir</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- KVKK -->
-  <section id="kvkk" class="scroll-mt-24 py-16 bg-slate-800">
-    <div class="mx-auto max-w-4xl px-4">
+  <!-- KVKK & Çerez -->
+  <section id="kvkk" class="scroll-mt-24 py-16 bg-slate-50">
+    <div class="mx-auto max-w-7xl px-4">
       <h2 class="text-3xl font-bold">KVKK Aydınlatma Metni</h2>
-      <p class="mt-4 text-slate-300">DMR Sayım olarak 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında; iletişim formları, teklif süreçleri ve müşteri ilişkileri yönetimi sırasında paylaştığınız ad, soyad, e‑posta, telefon ve mesaj içeriklerinizi işlemekteyiz. Verileriniz; sözleşmenin kurulması/ifası, meşru menfaat ve açık rıza şartlarına dayanarak işlenir; hukuki yükümlülükler gereği ilgili kişi/kurumlarla ve hizmet sağlayıcılarımızla sınırlı olarak paylaşılabilir.</p>
-      <ul class="list-disc list-inside mt-4 text-slate-300 space-y-2">
-        <li><span class="font-semibold">Amaçlar:</span> İletişim/tekliflendirme, operasyon planlama, müşteri memnuniyeti.</li>
-        <li><span class="font-semibold">Saklama Süresi:</span> Mevzuat ve sözleşmesel yükümlülükler uyarınca gerekli süre.</li>
-        <li><span class="font-semibold">Haklarınız:</span> KVKK m.11 uyarınca erişim, düzeltme, silme, itiraz.</li>
-        <li><span class="font-semibold">Başvuru:</span> <a class="underline" href="mailto:info@dmrsayim.com">info@dmrsayim.com</a></li>
-      </ul>
+      <p class="mt-4 text-slate-600 max-w-4xl">6698 sayılı KVKK kapsamında; iletişim formlarında paylaştığınız kişisel verileriniz tekliflendirme ve müşteri ilişkileri süreçlerinde, sözleşmenin ifası/meşru menfaat/açık rıza şartlarına dayanılarak işlenir; ilgili mevzuat gereği yetkili kişi/kurumlara ve hizmet sağlayıcılarımıza sınırlı olarak aktarılabilir. Başvurular: <a class="underline" href="mailto:info@dmrsayim.com">info@dmrsayim.com</a></p>
     </div>
   </section>
-
-  <!-- Çerez Politikası -->
   <section id="cerez" class="scroll-mt-24 py-16">
-    <div class="mx-auto max-w-4xl px-4">
+    <div class="mx-auto max-w-7xl px-4">
       <h2 class="text-3xl font-bold">Çerez (Cookie) Politikası</h2>
-      <p class="mt-4 text-slate-300">Web sitemizde zorunlu çerezler siteyi çalıştırmak için kullanılır. İstatistik/performans çerezleri yalnızca açık rızanızla devreye alınır. Tarayıcı ayarlarınızdan çerez tercihlerinizi yönetebilirsiniz. Üçüncü taraf bağlantılar (WhatsApp, Formspree) kendi çerez/politikalarına tabidir.</p>
-      <ul class="list-disc list-inside mt-4 text-slate-300 space-y-2">
-        <li><span class="font-semibold">Zorunlu Çerezler:</span> Oturum ve güvenlik için gereklidir.</li>
-        <li><span class="font-semibold">Performans Çerezleri:</span> Kullanım istatistikleri (açık rıza ile).</li>
-        <li><span class="font-semibold">Yönetim:</span> Tarayıcı ayarlarınızdan çerezleri silebilir veya engelleyebilirsiniz.</li>
-      </ul>
+      <p class="mt-4 text-slate-600 max-w-4xl">Sitemizde zorunlu çerezler siteyi çalıştırmak için kullanılır. İstatistik/performans çerezleri yalnızca açık rızanızla devreye alınır. Tarayıcı ayarlarından çerez tercihlerinizi yönetebilirsiniz.</p>
     </div>
   </section>
 
-  <!-- Altbilgi -->
-  <footer class="py-10 border-t border-slate-800">
-    <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400">
+  <!-- Footer -->
+  <footer class="py-10 border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
       <div>© <span id="yil"></span> DMR Sayım. Tüm hakları saklıdır.</div>
       <div class="flex items-center gap-4">
         <a href="#kvkk" class="hover:text-brand">KVKK</a>
         <a href="#cerez" class="hover:text-brand">Çerez Politikası</a>
-        <a href="#" class="hover:text-brand">İletişim</a>
+        <a href="#iletisim" class="hover:text-brand">İletişim</a>
       </div>
     </div>
   </footer>
 
-  <!-- Küçük JS -->
-  <script>
-    // Yıl
-    document.getElementById('yil').textContent = new Date().getFullYear();
-
-    // Mobil menü
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-    menuBtn?.addEventListener('click', () => {
-      mobileNav.classList.toggle('hidden');
-    });
-  </script>
-
-  <!-- (Opsiyonel) Analytics - gerçek UA/GA4 kodunuzu ekleyin -->
-  <!-- <script>/* Google Analytics */</script> -->
-  <!-- Yüzen WhatsApp Balonu (mobil + desktop) -->
-  <a href="https://wa.me/905365619831" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile yazın"
-     class="fixed bottom-6 right-4 md:bottom-8 md:right-6 z-50 rounded-full px-4 py-4 md:px-5 md:py-4 bg-[#25D366] text-white shadow-soft hover:bg-[#1ebe57] hover:scale-105 active:scale-95 transition">
-    <span class="inline-flex items-center gap-2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6" aria-hidden="true">
-        <path d="M12.04 2c-5.51 0-9.98 4.41-9.98 9.85 0 1.74.46 3.45 1.34 4.96L2 22l5.35-1.3c1.46.8 3.1 1.22 4.78 1.22 5.51 0 9.98-4.41 9.98-9.85C22.11 6.41 17.55 2 12.04 2Zm0 17.62c-1.5 0-2.96-.39-4.24-1.13l-.3-.17-3.16.77.81-3.02-.2-.31a7.9 7.9 0 0 1-1.23-4.25c0-4.31 3.6-7.82 8.02-7.82 4.42 0 8.02 3.5 8.02 7.82 0 4.31-3.6 7.83-8.02 7.83Zm4.66-5.86c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.57.13-.17.27-.65.8-.8.96-.15.18-.3.2-.56.07-.25-.13-1.05-.38-2-1.2-.74-.63-1.25-1.4-1.4-1.64-.15-.27-.02-.41.11-.54.12-.12.25-.31.37-.47.12-.16.16-.27.24-.45.08-.18.04-.34-.02-.47-.06-.13-.57-1.36-.78-1.86-.2-.48-.4-.42-.57-.43l-.49-.01c-.17 0-.45.07-.68.33-.23.27-.89.86-.89 2.08 0 1.22.9 2.41 1.03 2.58.12.16 1.78 2.8 4.38 3.82.61.25 1.09.4 1.46.52.61.19 1.16.16 1.6.1.49-.07 1.47-.6 1.68-1.17.21-.57.21-1.05.15-1.16-.06-.1-.22-.16-.47-.28Z"/>
-      </svg>
-      <span class="hidden md:inline text-sm font-medium">Bize Yazın</span>
-    </span>
+  <!-- WhatsApp yüzen buton -->
+  <a href="https://wa.me/905365619831" target="_blank" rel="noopener noreferrer"
+     class="fixed right-5 bottom-5 inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-4 py-3 shadow-soft hover:opacity-90">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.281 5.443 0 12.057 0c3.182 0 6.167 1.24 8.413 3.488a11.82 11.82 0 013.49 8.41c-.003 6.617-5.286 11.898-11.9 11.898a11.9 11.9 0 01-5.938-1.594L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.593 5.448 0 9.886-4.434 9.889-9.885.003-5.462-4.415-9.89-9.881-9.893-5.452 0-9.887 4.434-9.89 9.885a9.86 9.86 0 001.588 5.418l-.999 3.648 3.901-.766zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.966-.272-.099-.47-.149-.669.149-.198.297-.768.966-.941 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.173.198-.297.297-.495.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+    Bize Yazın
   </a>
+
+  <script>
+    document.getElementById('yil').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
